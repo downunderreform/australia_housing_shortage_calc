@@ -125,9 +125,9 @@ for i, bracket_population in enumerate(population_by_bracket.values()):
     total_households = total_households + living_propensities_1996[7][i] / 100 * bracket_population / 1
     # Number of female parents living in single parent households with children. Divide by 1, because 1 parent.
     total_households = total_households + living_propensities_1996[8][i] / 100 * bracket_population / 1
-    # Number of related people living in an "other family" household. Divide by average other family group household size.
-    total_households = total_households + living_propensities_1996[12][i] / 100 * bracket_population / group_household_size
-    # Number of unrelated people living in an "other family" household. Divide by average other family group household size.
+    # Number of related people living in an "other family" household. Divide by average "other family" household size.
+    total_households = total_households + living_propensities_1996[12][i] / 100 * bracket_population / other_family_household_size
+    # Number of unrelated people living in a group household. Divide by average "group household" size.
     total_households = total_households + living_propensities_1996[14][i] / 100 * bracket_population / group_household_size
     # Number of males living by themselves. Divide by 1, because 1 person per household.
     total_households = total_households + living_propensities_1996[16][i] / 100 * bracket_population / 1
